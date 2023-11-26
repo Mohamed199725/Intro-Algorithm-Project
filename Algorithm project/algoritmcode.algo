@@ -1,0 +1,29 @@
+ALGORITHM sentence
+VAR
+    sentence_length : INTEGER:= 0;
+    word_count : INTEGER:= 0;
+    vowel_count : INTEGER:= 0;
+    vowels : STRING:= {"a","e","i","o","u","A","E","I","O","U"};
+BEGIN
+    
+      //Iterate through each character in the sentence
+    FOR CHAR IN sentence DO
+      // Increment the length counter for each character
+        sentence_length += 1;
+    END_FOR
+      //Check if the character is a space, indicating the end of a word
+    IF (CHAR == " " ) THEN
+        word_count += 1;
+      //Check if the character is a vowel
+    ELSE_IF (CHAR IN vowels) THEN
+        vowel_count += 1;
+    END_IF
+    //The last word doesn't end with a space, so we need to add 1 to the word count
+    word_count += 1;
+    
+    // Displaying the results
+    Output "Length of the sentence:", sentence_length;
+    Output "Number of words in the sentence:", word_count;
+    Output "Number of vowels in the sentence:", vowel_count;
+
+END
