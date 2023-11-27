@@ -3,7 +3,7 @@ VAR
     sentence_length : INTEGER:= 0;
     word_count : INTEGER:= 0;
     vowel_count : INTEGER:= 0;
-    vowels : STRING:= {"a","e","i","o","u","A","E","I","O","U"};
+    vowels : STRING:= "a","e","i","o","u","A","E","I","O","U";
 BEGIN
     
       //Iterate through each character in the sentence
@@ -22,8 +22,8 @@ BEGIN
     word_count += 1;
     
     // Displaying the results
-    Output "Length of the sentence:", sentence_length;
-    Output "Number of words in the sentence:", word_count;
-    Output "Number of vowels in the sentence:", vowel_count;
+     Write ("Length of the sentence:", sentence_length);
+     Write ("Number of words in the sentence:", word_count);
+     Write ("Number of vowels in the sentence:", vowel_count);
 
 END
