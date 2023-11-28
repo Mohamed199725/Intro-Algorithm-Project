@@ -4,18 +4,19 @@ VAR
     word_count : INTEGER:= 0;
     vowel_count : INTEGER:= 0;
     vowels : STRING:= "a","e","i","o","u","A","E","I","O","U";
+    c : CHAR :=""
 BEGIN
     
       //Iterate through each character in the sentence
-    FOR CHAR IN sentence DO
+    FOR c IN sentence DO
       // Increment the length counter for each character
         sentence_length += 1;
     END_FOR
       //Check if the character is a space, indicating the end of a word
-    IF (CHAR == " " ) THEN
+    IF (c == " " ) THEN
         word_count += 1;
       //Check if the character is a vowel
-    ELSE_IF (CHAR IN vowels) THEN
+    ELSE_IF (c IN vowels) THEN
         vowel_count += 1;
     END_IF
     //The last word doesn't end with a space, so we need to add 1 to the word count
